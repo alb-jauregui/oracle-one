@@ -1,0 +1,205 @@
+hola mundo
+	public class Hola {
+		public static void main(String[] args){
+			System.out.println("Hola Mundo");
+		}
+	}
+
+variables
+	enteros (byte, short, int, long)
+	punto flotante (double y float)
+	char-un solo caracter
+	boolean (true o false)
+
+operadores aritmeticos
+	+ - adicion
+	- - sustraccion
+	* - multiplicacion
+	/ - division
+	% - modulo (resto de la division)
+
+operadores relacionales
+	== - igual a
+	!= - dirente de
+	> - mayor que
+	< - menor que
+	>= - mayor o igual que
+	<= - menor o igaul que
+
+operadores logicos
+	&& - and
+	|| - or
+	! - not
+
+operador de incremento
+	++variable - preincremento
+	variable++ - postincremento
+
+casting
+	// casting implicito
+	int x = 10;
+	double y = x;
+	// casting explicito
+	double x = 10.5;
+	int y = (int) x;
+
+if_else
+	if (fechaLanzamiento >= 2022){
+		System.out.println("Peliculas mas populares");
+	} else {
+		System.out.println("Pelicula retro que aun vale la pena ver");
+	}
+
+switch case
+	int dia = 3;
+	switch (dia) {
+	  case 1:
+	    System.out.println("El día 1 es lunes");
+	    break;
+	  case 2:
+	    System.out.println("El día 2 es martes");
+	    break;
+	  case 3:
+	    System.out.println("El día 3 es miércoles");
+	    break;
+	  // otros casos posibles...
+	  default:
+	    System.out.println("Día no válido");
+	}
+
+lectura de datos
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Escriba su nombre:");
+	Stirng nombre = scanner.nextLine();
+	System.out.println("Escriba su edad:");
+	Stirng edad = scanner.nextInt();
+	System.out.println("Escriba el numero que desea evaluar:");
+	Stirng valor = scanner.nextDouble();
+	scanner.close();
+
+for
+    for (int i = 0; i < 3; i++) {
+      System.out.println("Escribe la nota que le darias a la pelicula Matrix:");
+      nota = scanner.nextDouble();
+      mediaEvaluaciones = mediaEvaluaciones + nota;
+    }
+
+while
+	while (contador <= 20){
+		System.out.println(contador);
+		contador++;
+	}
+
+clases
+	public class Persona {
+		String nombre;
+		int edad;
+
+		void cumplirAnos(){
+			edad++;
+		}
+	}
+
+objeto
+	Persona persona1 = new Persona();
+	persona1.nombre = "Ana";
+	persona1.edad = 20;
+
+modificadores de acceso
+	public - accedido por cualquier clase de cualquier paquete
+		public double saldo;
+	default - accedido por cualquier clase del mismo paquete
+		double saldo;
+	private - accedido dentro de la misma clase
+		private double saldo;
+	protected - accedido por otras clases del mismo paquete y tambien por sus subclases
+		protected double saldo;
+
+this
+	public class Lampara{
+		private boolean encendida;
+		private String modelo;
+
+		public void enciendeLaLampara(boolean encendida){
+			this.encendida = encendida;
+		}
+	}
+
+herencia
+	public class Cuenta{ // superclase
+		private String titular;
+		private double saldo;
+	}
+	public class CuentaAhorro extends Cuenta{ // subclase
+		private double tasaDeInteres;
+	}
+
+poliformismo de clases
+	class Animal {
+	    void hacerSonido() {
+	        System.out.println("Hace un sonido genérico");
+	    }
+	}
+
+	class Perro extends Animal {
+	    void hacerSonido() {
+	        System.out.println("El perro ladra");
+	    }
+	}
+
+	class Gato extends Animal {
+	    void hacerSonido() {
+	        System.out.println("El gato maulla");
+	    }
+	}
+
+	public class Main {
+	    public static void main(String[] args) {
+	        Animal miMascota = new Perro();
+	        miMascota.hacerSonido(); // Salida: El perro ladra
+
+	        miMascota = new Gato();
+	        miMascota.hacerSonido(); // Salida: El gato maulla
+	    }
+	}
+
+poliformismo de interfaces
+	interface Figura {
+	    double calcularArea();
+	}
+
+	class Circulo implements Figura {
+	    double radio;
+
+	    Circulo(double radio) {
+	        this.radio = radio;
+	    }
+
+	    public double calcularArea() {
+	        return Math.PI * radio * radio;
+	    }
+	}
+
+	class Rectangulo implements Figura {
+	    double longitud, ancho;
+
+	    Rectangulo(double longitud, double ancho) {
+	        this.longitud = longitud;
+	        this.ancho = ancho;
+	    }
+
+	    public double calcularArea() {
+	        return longitud * ancho;
+	    }
+	}
+
+	public class Main {
+	    public static void main(String[] args) {
+	        Figura figura1 = new Circulo(5.0);
+	        Figura figura2 = new Rectangulo(4.0, 3.0);
+
+	        System.out.println("Área del círculo: " + figura1.calcularArea()); // Salida: Área del círculo: 78.54
+	        System.out.println("Área del rectángulo: " + figura2.calcularArea()); // Salida: Área del rectángulo: 12.0
+	    }
+	}
+

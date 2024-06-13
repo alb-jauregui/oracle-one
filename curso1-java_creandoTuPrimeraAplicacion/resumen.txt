@@ -1,0 +1,91 @@
+hola mundo
+	public class Hola {
+		public static void main(String[] args){
+			System.out.println("Hola Mundo");
+		}
+	}
+
+variables
+	enteros (byte, short, int, long)
+	punto flotante (double y float)
+	char-un solo caracter
+	boolean (true o false)
+
+operadores aritmeticos
+	+ - adicion
+	- - sustraccion
+	* - multiplicacion
+	/ - division
+	% - modulo (resto de la division)
+
+operadores relacionales
+	== - igual a
+	!= - dirente de
+	> - mayor que
+	< - menor que
+	>= - mayor o igual que
+	<= - menor o igaul que
+
+operadores logicos
+	&& - and
+	|| - or
+	! - not
+
+operador de incremento
+	++variable - preincremento
+	variable++ - postincremento
+
+casting
+	// casting implicito
+	int x = 10;
+	double y = x;
+	// casting explicito
+	double x = 10.5;
+	int y = (int) x;
+
+if_else
+	if (fechaLanzamiento >= 2022){
+		System.out.println("Peliculas mas populares");
+	} else {
+		System.out.println("Pelicula retro que aun vale la pena ver");
+	}
+
+switch case
+	int dia = 3;
+	switch (dia) {
+	  case 1:
+	    System.out.println("El día 1 es lunes");
+	    break;
+	  case 2:
+	    System.out.println("El día 2 es martes");
+	    break;
+	  case 3:
+	    System.out.println("El día 3 es miércoles");
+	    break;
+	  // otros casos posibles...
+	  default:
+	    System.out.println("Día no válido");
+	}
+
+lectura de datos
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Escriba su nombre:");
+	Stirng nombre = scanner.nextLine();
+	System.out.println("Escriba su edad:");
+	Stirng edad = scanner.nextInt();
+	System.out.println("Escriba el numero que desea evaluar:");
+	Stirng valor = scanner.nextDouble();
+	scanner.close();
+
+for
+    for (int i = 0; i < 3; i++) {
+      System.out.println("Escribe la nota que le darias a la pelicula Matrix:");
+      nota = scanner.nextDouble();
+      mediaEvaluaciones = mediaEvaluaciones + nota;
+    }
+
+while
+	while (contador <= 20){
+		System.out.println(contador);
+		contador++;
+	}

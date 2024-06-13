@@ -1,0 +1,12 @@
+clase1
+	var
+		var nombreDeLaVariable = valorInicial;
+
+	array
+		int[] numeros = new int[5];
+		Pelicula[] peliculas = new Pelicula[2];
+		Pelicula pelicula1 = new Pelicula("Avatar", 2009);
+		Pulicula pelicula2 = new Pelicula("El señor de los anillos", 2001);
+		peliculas[0] = pelicula1;
+		peliculas[1] = pelicula2;
+	
