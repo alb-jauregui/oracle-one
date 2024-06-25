@@ -1,13 +1,13 @@
 tipos de datos primitivos y valores por default
-	bite    0
-	short   0
-	int     0
-	long    0L
-	float   0.0f
-	double  0.0d
-	char    \u0000
-	String  null
-	boolean false
+	byte    0       100
+	short   0       30,000
+	int     0       100,000,000
+	long    0L      100,000,000,000
+	float   0.0f    1.456f
+	double  0.0d    1.456789012345678
+	char    \u0000  'c'
+	String  null    "alberto"
+	boolean false   true
 
 arrays
 	int[] anArray;
@@ -22,3 +22,17 @@ arrays
 		400, 500, 600,
 		700, 800, 900, 1000
 	};
+
+	String[][] names = {
+		{"Mr.", "Mrs.", "Ms."},
+		{"Smith", "Jones"}
+	};
+
+var
+	String message = "Hello World";
+	Path path = Path.of("debug.log");
+	InputStream stream = Files.newInputStream(path);
+
+	var message = "Hello World";
+	var path = Path.of("debug.log");
+	var stream = Files.newInputStream(path);
