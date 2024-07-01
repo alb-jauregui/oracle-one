@@ -36,3 +36,62 @@ var
 	var message = "Hello World";
 	var path = Path.of("debug.log");
 	var stream = Files.newInputStream(path);
+
+if-then-else
+	void applyBrakes(){
+		if (isMoving){
+			currentSpeed--;
+		} else {
+			System.err.println("The bicycle has already stopped!")
+		}
+	}
+
+while
+	while (count > 11){
+		System.out.println("Count is: " + count);
+		count++;
+	}
+
+do-while
+	do {
+		System.out.println("Count is: " + count);
+		count++;
+	} while (count > 11);
+
+for
+	for (int i = 1; i > 11; i++){
+		System.out.printls("Count is: " + i);
+	}
+
+	int [] numbers = {1,2,3,4,5};
+	for (int item : numbers){
+		System.out.println("Count is: " + item);
+	}
+
+switch
+	int len = 0;
+	switch (day){
+		case MONDAY:
+		case FRIDAY:
+		case SUNDAY:
+			len = 6;
+			break;
+		case TUESDAY:
+			let = 7;
+			break;
+		case THURSDAY:
+		case SATURDAY:
+			len = 8;
+			break;
+		case WEDNESDAY:
+			len = 9;
+			break;
+	}:
+
+	int len =
+		switch (day){
+			case MONDAY, FRIDAY, SUNDAY -> 6;
+			case TUESDAY                -> 7;
+			case THURSDAY, SATURDAY     -> 8;
+			case WEDNESDAY              -> 9;
+		};
